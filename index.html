@@ -5,13 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kovalenko-homework-07</title>
-    <link rel="stylesheet" href="./css/stile.css">
+    <link rel="stylesheet" href="./css/stiles.css">
 </head>
+<header class="header">
+    <div class="container">
+        <nav class="navigation">
+            <a class="logotype" href="#">Golden</a>
+            <ul class="navigation__list">
+                <li class="navigation__list-item">
+                    <a href="#" class="navigation__list-item-link">Home</a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="#" class="navigation__list-item-link">Services</a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="#" class="navigation__list-item-link">Portfolio</a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="#" class="navigation__list-item-link">About</a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="#" class="navigation__list-item-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 <body>
-
+    <main>
+        <section class="section__services">
+            <div class="container">
+                <h2 class="services__caption">Services</h2>
+                <p class="services__caption-subhead">Proin iaculis purus consequat sem cure.</p>
+                <ul class="servises__list">
+                    <li class="services__list-item icon__basket">
+                        <h3 class="services__list-item-title">E-Commerce</h3>
+                        <p class="services__list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Odio libero pariatur sit molestias incidunt neque!
+                        </p>
+                    </li>
+                    <li class="services__list-item icon__laptop">
+                        <h3 class="services__list-item-title">Responsive Web</h3>
+                        <p class="services__list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Odio libero pariatur sit molestias incidunt neque!
+                        </p>
+                    </li>
+                    <li class="services__list-item icon__locked">
+                        <h3 class="services__list-item-title">Web Security</h3>
+                        <p class="services__list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Odio libero pariatur sit molestias incidunt neque!
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section__contact">
+            <div class="container">
+                <h2 class="contact__caption">Contact Us</h2>
+                <p class="contact__caption-subhead">Proin iaculis purus consequat sem cure.</p>
+                <form action="#" class="contact__form">
+                    <div class="contact__form-area">
+                        <ul class="contact__form-input-list">
+                            <li class="contact__form-input-list-item">
+                                <input class="contact__form-input-list-item-area" name="user-name" minlength="4"
+                                    maxlength="16" required placeholder="you name *" type="text">
+                            </li>
+                            <li class="contact__form-input-list-item">
+                                <input class="contact__form-input-list-item-area" name="user-email" minlength="8"
+                                    maxlength="30" required placeholder="your e-mail *" type="email">
+                            </li>
+                            <li class="contact__form-input-list-item">
+                                <input class="contact__form-input-list-item-area" name="user-sunject"
+                                    placeholder="subject" type="text">
+                            </li>
+                        </ul>
+                        <textarea class="contact__form-textarea" name="user-message" required
+                            placeholder="your message *" id="" cols="" rows="" minlength="10"
+                            maxlength="200"></textarea>
+                    </div>
+                    <button class="contact__form-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
-
-

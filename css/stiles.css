@@ -1,25 +1,46 @@
-/* montserrat-regular - latin */
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    src: local('Montserrat Regular'), local('Montserrat-Regular'),
-        url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local("Montserrat Regular"), local("Montserrat-Regular"),
+        url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+        url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
 }
 
-/* montserrat-700 - latin */
 @font-face {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    src: local('Montserrat Bold'), local('Montserrat-Bold'),
-        url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/montserrat-v14-latin-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: local("Montserrat Bold"), local("Montserrat-Bold"),
+        url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+        url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
+        url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Rouge Script";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Rouge Script"), local("RougeScript-Regular"),
+        url("../fonts/rouge-script-v8-latin-regular.woff2") format("woff2"),
+        url("../fonts/rouge-script-v8-latin-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    src: local("Noto Serif Italic"), local("NotoSerif-Italic"),
+        url("../fonts/noto-serif-v8-latin-italic.woff2") format("woff2"),
+        url("../fonts/noto-serif-v8-latin-italic.woff") format("woff");
 }
 
 /* MY STANDART RESET */
@@ -31,11 +52,11 @@
 }
 
 html {
+    font-size: 16px;
     box-sizing: border-box;
 }
 
 body {
-    width: 1200px;
     margin: 0 auto;
 }
 
@@ -54,21 +75,257 @@ a {
     text-decoration: none;
 }
 
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+.container {
+    width: 940px;
+    margin: 0 auto;
 }
 
-
-
-
-
 /* HEADER NAVIGATION */
+
+.header {
+    margin: 0 auto;
+    padding-top: 42px;
+    padding-bottom: 102px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logotype {
+    font-size: 1.625rem;
+    font-family: "Rouge Script";
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    color: rgb(254, 209, 54);
+    text-align: left;
+}
+
+.navigation__list {
+    display: flex;
+}
+
+.navigation__list-item {
+    font-size: 0.875rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.navigation__list-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation__list-item-link {
+    color: rgb(93, 93, 93);
+    transition: color 200ms linear;
+}
+
+.navigation__list-item-link:hover,
+.navigation__list-item-link:focus {
+    color: rgb(254, 209, 54);
+    transition: color 200ms linear;
+}
+
+/* MAIN CONTENT */
+/* SECTION SERVICES */
+
+/* .section__services {} */
+
+.services__caption {
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    color: rgb(34, 34, 34);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.services__caption-subhead {
+    font-size: 1rem;
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    text-align: center;
+    margin-bottom: 74px;
+}
+
+.servises__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services__list-item {
+    width: 290px;
+}
+
+.services__list-item::before {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(254, 209, 54);
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.icon__basket::before {
+    background-image: url(../images/icons/icon_basket.png);
+}
+
+.icon__laptop::before {
+    background-image: url(../images/icons/icon_laptop.png);
+}
+
+.icon__locked::before {
+    background-image: url(../images/icons/icon_locked.png);
+}
+
+.services__list-item-title {
+    font-size: 1.125rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.services__list-item-text {
+    font-size: 0.875rem;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    text-align: center;
+    margin-bottom: 102px;
+}
+
+/* SECTION CONTACT */
+
+.section__contact {
+    width: 100%;
+    padding-top: 96px;
+    padding-bottom: 114px;
+    background-image: url(../images/bg/map.png);
+    background-color: rgb(34, 34, 34);
+    background-repeat: no-repeat;
+    background-size: 614px 537px;
+    background-position: right bottom 24px;
+}
+
+.contact__caption {
+    font-size: 2.5rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    color: rgb(225, 225, 225);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.contact__caption-subhead {
+    font-size: 1rem;
+    font-family: "Noto Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    text-align: center;
+    margin-bottom: 74px;
+}
+
+/* FORM */
+
+/* .contact__form {} */
+
+.contact__form-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* .contact__form-input-list {} */
+
+/* .contact__form-input-list-item {} */
+
+.contact__form-input-list-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.contact__form-input-list-item-area {
+    width: 456px;
+    height: 52px;
+    padding-left: 20px;
+    outline: none;
+}
+
+.contact__form-textarea {
+    width: 456px;
+    height: 216px;
+    padding: 20px;
+    resize: none;
+}
+
+/* .contact__form-input-list-item-area,
+.contact__form-textarea {
+    font-size: 0.875rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    color: rgb(187, 187, 187);
+    line-height: 1.2;
+    text-align: left;
+} */
+
+.contact__form-input-list-item-area::placeholder,
+.contact__form-textarea::placeholder {
+    font-size: 0.875rem;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    color: rgb(187, 187, 187);
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.contact__form-input-list-item-area:focus:valid,
+.contact__form-textarea:focus:valid {
+    border: 2px solid rgb(18, 216, 7);
+}
+
+.contact__form-input-list-item-area:focus:invalid,
+.contact__form-textarea:focus:invalid {
+    border: 2px solid rgb(243, 129, 129);
+}
+
+.contact__form-button {
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    height: 66px;
+    font-size: 1.125rem;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 209, 54);
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
